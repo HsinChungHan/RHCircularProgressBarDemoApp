@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1658D382BCA28F400FC338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D372BCA28F400FC338C /* AppDelegate.swift */; };
+		D1658D3A2BCA28F400FC338C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D392BCA28F400FC338C /* SceneDelegate.swift */; };
+		D1658D3C2BCA28F400FC338C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D3B2BCA28F400FC338C /* ViewController.swift */; };
+		D1658D3F2BCA28F400FC338C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1658D3D2BCA28F400FC338C /* Main.storyboard */; };
+		D1658D412BCA28F600FC338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1658D402BCA28F600FC338C /* Assets.xcassets */; };
+		D1658D442BCA28F600FC338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1658D422BCA28F600FC338C /* LaunchScreen.storyboard */; };
+		D1658D4F2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D4E2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift */; };
+		D1658D592BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D582BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift */; };
+		D1658D5B2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D5A2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1658D4B2BCA28F600FC338C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1658D2C2BCA28F400FC338C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1658D332BCA28F400FC338C;
+			remoteInfo = RHCircularProgressBarDemoApp;
+		};
+		D1658D552BCA28F600FC338C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1658D2C2BCA28F400FC338C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1658D332BCA28F400FC338C;
+			remoteInfo = RHCircularProgressBarDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1658D342BCA28F400FC338C /* RHCircularProgressBarDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RHCircularProgressBarDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1658D372BCA28F400FC338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1658D392BCA28F400FC338C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D1658D3B2BCA28F400FC338C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1658D3E2BCA28F400FC338C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1658D402BCA28F600FC338C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1658D432BCA28F600FC338C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1658D452BCA28F600FC338C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1658D4A2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHCircularProgressBarDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1658D4E2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarDemoAppTests.swift; sourceTree = "<group>"; };
+		D1658D542BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHCircularProgressBarDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1658D582BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarDemoAppUITests.swift; sourceTree = "<group>"; };
+		D1658D5A2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1658D312BCA28F400FC338C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D472BCA28F600FC338C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D512BCA28F600FC338C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1658D2B2BCA28F400FC338C = {
+			isa = PBXGroup;
+			children = (
+				D1658D362BCA28F400FC338C /* RHCircularProgressBarDemoApp */,
+				D1658D4D2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests */,
+				D1658D572BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests */,
+				D1658D352BCA28F400FC338C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1658D352BCA28F400FC338C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1658D342BCA28F400FC338C /* RHCircularProgressBarDemoApp.app */,
+				D1658D4A2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.xctest */,
+				D1658D542BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1658D362BCA28F400FC338C /* RHCircularProgressBarDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				D1658D372BCA28F400FC338C /* AppDelegate.swift */,
+				D1658D392BCA28F400FC338C /* SceneDelegate.swift */,
+				D1658D3B2BCA28F400FC338C /* ViewController.swift */,
+				D1658D3D2BCA28F400FC338C /* Main.storyboard */,
+				D1658D402BCA28F600FC338C /* Assets.xcassets */,
+				D1658D422BCA28F600FC338C /* LaunchScreen.storyboard */,
+				D1658D452BCA28F600FC338C /* Info.plist */,
+			);
+			path = RHCircularProgressBarDemoApp;
+			sourceTree = "<group>";
+		};
+		D1658D4D2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1658D4E2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift */,
+			);
+			path = RHCircularProgressBarDemoAppTests;
+			sourceTree = "<group>";
+		};
+		D1658D572BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1658D582BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift */,
+				D1658D5A2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift */,
+			);
+			path = RHCircularProgressBarDemoAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1658D332BCA28F400FC338C /* RHCircularProgressBarDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1658D5E2BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoApp" */;
+			buildPhases = (
+				D1658D302BCA28F400FC338C /* Sources */,
+				D1658D312BCA28F400FC338C /* Frameworks */,
+				D1658D322BCA28F400FC338C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHCircularProgressBarDemoApp;
+			productName = RHCircularProgressBarDemoApp;
+			productReference = D1658D342BCA28F400FC338C /* RHCircularProgressBarDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1658D492BCA28F600FC338C /* RHCircularProgressBarDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1658D612BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoAppTests" */;
+			buildPhases = (
+				D1658D462BCA28F600FC338C /* Sources */,
+				D1658D472BCA28F600FC338C /* Frameworks */,
+				D1658D482BCA28F600FC338C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1658D4C2BCA28F600FC338C /* PBXTargetDependency */,
+			);
+			name = RHCircularProgressBarDemoAppTests;
+			productName = RHCircularProgressBarDemoAppTests;
+			productReference = D1658D4A2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1658D532BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1658D642BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoAppUITests" */;
+			buildPhases = (
+				D1658D502BCA28F600FC338C /* Sources */,
+				D1658D512BCA28F600FC338C /* Frameworks */,
+				D1658D522BCA28F600FC338C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1658D562BCA28F600FC338C /* PBXTargetDependency */,
+			);
+			name = RHCircularProgressBarDemoAppUITests;
+			productName = RHCircularProgressBarDemoAppUITests;
+			productReference = D1658D542BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1658D2C2BCA28F400FC338C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D1658D332BCA28F400FC338C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					D1658D492BCA28F600FC338C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D1658D332BCA28F400FC338C;
+					};
+					D1658D532BCA28F600FC338C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D1658D332BCA28F400FC338C;
+					};
+				};
+			};
+			buildConfigurationList = D1658D2F2BCA28F400FC338C /* Build configuration list for PBXProject "RHCircularProgressBarDemoApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1658D2B2BCA28F400FC338C;
+			productRefGroup = D1658D352BCA28F400FC338C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1658D332BCA28F400FC338C /* RHCircularProgressBarDemoApp */,
+				D1658D492BCA28F600FC338C /* RHCircularProgressBarDemoAppTests */,
+				D1658D532BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1658D322BCA28F400FC338C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1658D442BCA28F600FC338C /* LaunchScreen.storyboard in Resources */,
+				D1658D412BCA28F600FC338C /* Assets.xcassets in Resources */,
+				D1658D3F2BCA28F400FC338C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D482BCA28F600FC338C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D522BCA28F600FC338C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1658D302BCA28F400FC338C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1658D3C2BCA28F400FC338C /* ViewController.swift in Sources */,
+				D1658D382BCA28F400FC338C /* AppDelegate.swift in Sources */,
+				D1658D3A2BCA28F400FC338C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D462BCA28F600FC338C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1658D4F2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1658D502BCA28F600FC338C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1658D592BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift in Sources */,
+				D1658D5B2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1658D4C2BCA28F600FC338C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1658D332BCA28F400FC338C /* RHCircularProgressBarDemoApp */;
+			targetProxy = D1658D4B2BCA28F600FC338C /* PBXContainerItemProxy */;
+		};
+		D1658D562BCA28F600FC338C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1658D332BCA28F400FC338C /* RHCircularProgressBarDemoApp */;
+			targetProxy = D1658D552BCA28F600FC338C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1658D3D2BCA28F400FC338C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1658D3E2BCA28F400FC338C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1658D422BCA28F600FC338C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1658D432BCA28F600FC338C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1658D5C2BCA28F600FC338C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1658D5D2BCA28F600FC338C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1658D5F2BCA28F600FC338C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RHCircularProgressBarDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1658D602BCA28F600FC338C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RHCircularProgressBarDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1658D622BCA28F600FC338C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHCircularProgressBarDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RHCircularProgressBarDemoApp";
+			};
+			name = Debug;
+		};
+		D1658D632BCA28F600FC338C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RHCircularProgressBarDemoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RHCircularProgressBarDemoApp";
+			};
+			name = Release;
+		};
+		D1658D652BCA28F600FC338C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RHCircularProgressBarDemoApp;
+			};
+			name = Debug;
+		};
+		D1658D662BCA28F600FC338C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WAGW44Z6JC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = devlab.com.RHCircularProgressBarDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RHCircularProgressBarDemoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1658D2F2BCA28F400FC338C /* Build configuration list for PBXProject "RHCircularProgressBarDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1658D5C2BCA28F600FC338C /* Debug */,
+				D1658D5D2BCA28F600FC338C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1658D5E2BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1658D5F2BCA28F600FC338C /* Debug */,
+				D1658D602BCA28F600FC338C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1658D612BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1658D622BCA28F600FC338C /* Debug */,
+				D1658D632BCA28F600FC338C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1658D642BCA28F600FC338C /* Build configuration list for PBXNativeTarget "RHCircularProgressBarDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1658D652BCA28F600FC338C /* Debug */,
+				D1658D662BCA28F600FC338C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1658D2C2BCA28F400FC338C /* Project object */;
+}
