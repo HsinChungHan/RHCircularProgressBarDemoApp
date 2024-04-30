@@ -16,6 +16,12 @@
 		D1658D4F2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D4E2BCA28F600FC338C /* RHCircularProgressBarDemoAppTests.swift */; };
 		D1658D592BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D582BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift */; };
 		D1658D5B2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D5A2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift */; };
+		D1658D682BCA290D00FC338C /* RHCircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D672BCA290D00FC338C /* RHCircularProgressBar.swift */; };
+		D1658D6B2BCA292F00FC338C /* RHUIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = D1658D6A2BCA292F00FC338C /* RHUIComponent */; };
+		D1658D6D2BCA2FE600FC338C /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1658D6C2BCA2FE600FC338C /* InterviewCell.swift */; };
+		D1A71A9E2BCA50990082D433 /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71A9D2BCA50990082D433 /* Interview.swift */; };
+		D1A71AA02BCAB39A0082D433 /* InterviewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */; };
+		D1A71AA22BCABAF50082D433 /* UIIMage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71AA12BCABAF50082D433 /* UIIMage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,11 @@
 		D1658D542BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHCircularProgressBarDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1658D582BCA28F600FC338C /* RHCircularProgressBarDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarDemoAppUITests.swift; sourceTree = "<group>"; };
 		D1658D5A2BCA28F600FC338C /* RHCircularProgressBarDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1658D672BCA290D00FC338C /* RHCircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBar.swift; sourceTree = "<group>"; };
+		D1658D6C2BCA2FE600FC338C /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
+		D1A71A9D2BCA50990082D433 /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
+		D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCellModel.swift; sourceTree = "<group>"; };
+		D1A71AA12BCABAF50082D433 /* UIIMage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1658D6B2BCA292F00FC338C /* RHUIComponent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +114,11 @@
 				D1658D372BCA28F400FC338C /* AppDelegate.swift */,
 				D1658D392BCA28F400FC338C /* SceneDelegate.swift */,
 				D1658D3B2BCA28F400FC338C /* ViewController.swift */,
+				D1658D672BCA290D00FC338C /* RHCircularProgressBar.swift */,
+				D1658D6C2BCA2FE600FC338C /* InterviewCell.swift */,
+				D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */,
+				D1A71A9D2BCA50990082D433 /* Interview.swift */,
+				D1A71AA12BCABAF50082D433 /* UIIMage+Extension.swift */,
 				D1658D3D2BCA28F400FC338C /* Main.storyboard */,
 				D1658D402BCA28F600FC338C /* Assets.xcassets */,
 				D1658D422BCA28F600FC338C /* LaunchScreen.storyboard */,
@@ -143,6 +160,9 @@
 			dependencies = (
 			);
 			name = RHCircularProgressBarDemoApp;
+			packageProductDependencies = (
+				D1658D6A2BCA292F00FC338C /* RHUIComponent */,
+			);
 			productName = RHCircularProgressBarDemoApp;
 			productReference = D1658D342BCA28F400FC338C /* RHCircularProgressBarDemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +235,9 @@
 				Base,
 			);
 			mainGroup = D1658D2B2BCA28F400FC338C;
+			packageReferences = (
+				D1658D692BCA292F00FC338C /* XCRemoteSwiftPackageReference "RHUIComponent" */,
+			);
 			productRefGroup = D1658D352BCA28F400FC338C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +284,11 @@
 				D1658D3C2BCA28F400FC338C /* ViewController.swift in Sources */,
 				D1658D382BCA28F400FC338C /* AppDelegate.swift in Sources */,
 				D1658D3A2BCA28F400FC338C /* SceneDelegate.swift in Sources */,
+				D1A71AA22BCABAF50082D433 /* UIIMage+Extension.swift in Sources */,
+				D1A71AA02BCAB39A0082D433 /* InterviewCellModel.swift in Sources */,
+				D1658D6D2BCA2FE600FC338C /* InterviewCell.swift in Sources */,
+				D1658D682BCA290D00FC338C /* RHCircularProgressBar.swift in Sources */,
+				D1A71A9E2BCA50990082D433 /* Interview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +478,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +507,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +637,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1658D692BCA292F00FC338C /* XCRemoteSwiftPackageReference "RHUIComponent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HsinChungHan/RHUIComponent";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1658D6A2BCA292F00FC338C /* RHUIComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1658D692BCA292F00FC338C /* XCRemoteSwiftPackageReference "RHUIComponent" */;
+			productName = RHUIComponent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1658D2C2BCA28F400FC338C /* Project object */;
 }
