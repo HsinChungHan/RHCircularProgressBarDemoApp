@@ -22,6 +22,7 @@
 		D1A71A9E2BCA50990082D433 /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71A9D2BCA50990082D433 /* Interview.swift */; };
 		D1A71AA02BCAB39A0082D433 /* InterviewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */; };
 		D1A71AA22BCABAF50082D433 /* UIIMage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A71AA12BCABAF50082D433 /* UIIMage+Extension.swift */; };
+		D1B905CC2BF6436300D183A5 /* RHCircularProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B905CB2BF6436300D183A5 /* RHCircularProgressBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D1A71A9D2BCA50990082D433 /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCellModel.swift; sourceTree = "<group>"; };
 		D1A71AA12BCABAF50082D433 /* UIIMage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMage+Extension.swift"; sourceTree = "<group>"; };
+		D1B905CB2BF6436300D183A5 /* RHCircularProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RHCircularProgressBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D1658D392BCA28F400FC338C /* SceneDelegate.swift */,
 				D1658D3B2BCA28F400FC338C /* ViewController.swift */,
 				D1658D672BCA290D00FC338C /* RHCircularProgressBar.swift */,
+				D1B905CB2BF6436300D183A5 /* RHCircularProgressBarViewModel.swift */,
 				D1658D6C2BCA2FE600FC338C /* InterviewCell.swift */,
 				D1A71A9F2BCAB39A0082D433 /* InterviewCellModel.swift */,
 				D1A71A9D2BCA50990082D433 /* Interview.swift */,
@@ -288,6 +291,7 @@
 				D1A71AA02BCAB39A0082D433 /* InterviewCellModel.swift in Sources */,
 				D1658D6D2BCA2FE600FC338C /* InterviewCell.swift in Sources */,
 				D1658D682BCA290D00FC338C /* RHCircularProgressBar.swift in Sources */,
+				D1B905CC2BF6436300D183A5 /* RHCircularProgressBarViewModel.swift in Sources */,
 				D1A71A9E2BCA50990082D433 /* Interview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

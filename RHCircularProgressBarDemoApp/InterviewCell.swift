@@ -39,6 +39,7 @@ class InterviewCell: UICollectionViewCell {
     }
 }
 
+// MARK: - APIs
 extension InterviewCell {
     func startBar(to value: Float = 1.0) {
         let duration = Double(maxAnimationDuration) * Double(value)
@@ -68,6 +69,7 @@ extension InterviewCell {
     }
 }
 
+// MARK: - UILayout
 private extension InterviewCell {
     func setupLayout() {
         [icon, bar, companyLabel, positionLabel, completionLabel, stageLabel].forEach { contentView.addSubview($0) }
@@ -92,7 +94,8 @@ private extension InterviewCell {
     }
 }
 
-extension InterviewCell {
+// MARK: - Helpers
+private extension InterviewCell {
     func makeProgressBar(with color: UIColor) -> RHCircularProgressBar {
         let bar = RHCircularProgressBar(atStartAngle: .nineClock, forRounds: 0.5, progressLayerColor: color, strokeWidth: 20)
         bar.delegate = self

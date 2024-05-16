@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Helpers
 extension ViewController {
     func makeCollectionView() -> UICollectionView {
         let flowLayout = UICollectionViewFlowLayout()
@@ -30,20 +31,21 @@ extension ViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(InterviewCell.self, forCellWithReuseIdentifier: "AchievementCellID")
+        collectionView.register(InterviewCell.self, forCellWithReuseIdentifier: String(describing: InterviewCell.self))
         collectionView.backgroundColor = .clear
         collectionView.contentInset = .init(top: 8, left: 8, bottom: 8, right: 8)
         return collectionView
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return interviewCellModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCellID", for: indexPath) as! InterviewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: InterviewCell.self), for: indexPath) as! InterviewCell
         let cellModel = interviewCellModels[indexPath.row]
         cell.configureCell(with: cellModel)
         cell.delegate = self
@@ -62,6 +64,7 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         for cell in collectionView.visibleCells {
@@ -81,6 +84,7 @@ extension ViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width / 2 - 16
@@ -89,8 +93,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - Mock Data
-extension ViewController {
-    
+private extension ViewController {
     func makeInterviewCellModels() -> [InterviewCellModel] {
         let companies = [
             "Twitter", "Docker",
@@ -136,6 +139,7 @@ extension ViewController {
     }
 }
 
+// MARK: - InterviewCellDelegate
 extension ViewController: InterviewCellDelegate {
     func interviewCell(_ interviewCell: InterviewCell, cellModel: InterviewCellModel, completionRateWillUpdate rate: Int, currentBarProgress value: Float) {
         let index = interviewCellModels.firstIndex { cellModel == $0 }!
@@ -143,6 +147,5 @@ extension ViewController: InterviewCellDelegate {
         interviewCellModels[index].currentCompletionRate = rate
     }
     
-    func interviewCell(_ interviewCell: InterviewCell, cellModel: InterviewCellModel, isDonetoValue: Bool, currentBarProgress value: Float) {
-    }
+    func interviewCell(_ interviewCell: InterviewCell, cellModel: InterviewCellModel, isDonetoValue: Bool, currentBarProgress value: Float) {}
 }
