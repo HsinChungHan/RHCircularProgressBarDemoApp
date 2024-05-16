@@ -9,31 +9,31 @@ import Foundation
 import RHUIComponent
 import UIKit
 
+enum StartAngleType {
+    case twelveClock
+    case threeClock
+    case sixClock
+    case nineClock
+    var angle: CGFloat {
+        switch self {
+        case .twelveClock:
+            return -CGFloat.pi / 2
+        case .threeClock:
+            return 0
+        case .sixClock:
+            return CGFloat.pi / 2
+        case .nineClock:
+            return CGFloat.pi
+        }
+    }
+}
+
 protocol RHCircularProgressBarDelegate: AnyObject {
     func progressBar(_ progressBar: RHCircularProgressBar, completionRateWillUpdate rate: Int, currentBarProgress value: Float)
     func progressBar(_ progressBar: RHCircularProgressBar, isDonetoValue: Bool, currentBarProgress value: Float)
 }
 
 class RHCircularProgressBar: UIView {
-    enum StartAngleType {
-        case twelveClock
-        case threeClock
-        case sixClock
-        case nineClock
-        var angle: CGFloat {
-            switch self {
-            case .twelveClock:
-                return -CGFloat.pi / 2
-            case .threeClock:
-                return 0
-            case .sixClock:
-                return CGFloat.pi / 2
-            case .nineClock:
-                return CGFloat.pi
-            }
-        }
-    }
-    
     weak var delegate: RHCircularProgressBarDelegate?
     
     private lazy var progressLayer = makeProgressLayer()
