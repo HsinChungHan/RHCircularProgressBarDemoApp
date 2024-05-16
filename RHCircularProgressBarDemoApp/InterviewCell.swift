@@ -5,6 +5,7 @@
 //  Created by Chung Han Hsin on 2024/4/13.
 //
 
+import RHCircularProgressBar
 import RHUIComponent
 import UIKit
 

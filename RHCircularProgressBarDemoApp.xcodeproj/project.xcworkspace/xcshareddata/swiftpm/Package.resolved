@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "rhcircularprogressbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HsinChungHan/RHCircularProgressBar.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c02b4de196a2e3b0149d2d62a4689b84d721360f"
+      }
+    },
+    {
       "identity" : "rhuicomponent",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/HsinChungHan/RHUIComponent",
@@ -12,10 +21,10 @@
     {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "location" : "https://github.com/SnapKit/SnapKit",
       "state" : {
-        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
-        "version" : "5.7.1"
+        "branch" : "main",
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158"
       }
     }
   ],
