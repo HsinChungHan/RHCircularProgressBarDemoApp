@@ -42,42 +42,9 @@ class RHCircularProgressBar: UIView {
     private lazy var circularPath = makeCircularPath()
     private var displayLink: CADisplayLink?
     
-    private var toValue: Float = 0
-    private var isFinishProgress: Bool {
-        toValue == 1.0
-    }
-    
-    var startAngle: CGFloat {
-        startAngleType.angle
-    }
-    
-    var endAngle: CGFloat {
-        startAngle + rounds * 2 * CGFloat.pi
-    }
-    
-    var trackLayerCGColor: CGColor {
-        progressLayerColor.withAlphaComponent(0.5).cgColor
-    }
-    
-    var progressLayerCGColor: CGColor {
-        progressLayerColor.cgColor
-    }
-    
-    var currentProgressValue: Float {
-        let currentProgressLayerValue = progressLayer.presentation()?.strokeEnd ?? 0
-        let currentProgressValue = min(currentProgressLayerValue + 0.01, 1.0)
-        return Float(currentProgressValue)
-    }
-    
-    let startAngleType: StartAngleType
-    let rounds: CGFloat
-    var progressLayerColor: UIColor
-    let strokeWidth: CGFloat
+    private let viewModel: RHCircularProgressBarViewModel
     init(atStartAngle startAngleType: StartAngleType = .twelveClock, forRounds rounds: CGFloat = 1.0, progressLayerColor: UIColor = Color.Red.v100, strokeWidth: CGFloat = 10.0) {
-        self.startAngleType = startAngleType
-        self.rounds = rounds
-        self.progressLayerColor = progressLayerColor
-        self.strokeWidth = strokeWidth
+        self.viewModel = .init(startAngleType: startAngleType, rounds: rounds, progressLayerColor: progressLayerColor, strokeWidth: strokeWidth)
         super.init(frame: .zero)
         backgroundColor = .clear
     }
@@ -98,20 +65,20 @@ class RHCircularProgressBar: UIView {
 // MARK: - Internal Methods
 extension RHCircularProgressBar {
     func configureProgressBar(with color: UIColor) {
-        progressLayerColor = color
-        progressLayer.strokeColor = progressLayerCGColor
-        gradientLayer.colors = makeShadeVariants(of: progressLayerColor)
+        viewModel.setProgressLayerColor(withColor: color)
+        progressLayer.strokeColor = viewModel.progressLayerCGColor
+        gradientLayer.colors = makeShadeVariants(of: viewModel.progressLayerColor)
     }
     
     func setProgressWithAnimation(duration: TimeInterval, value: Float) {
-        toValue = value
-        progressLayer.strokeEnd = CGFloat(toValue)
+        viewModel.setToValue(with: value)
+        progressLayer.strokeEnd = CGFloat(viewModel.toValue)
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.delegate = self
         animation.duration = duration
         animation.fromValue = 0
-        animation.toValue = toValue
+        animation.toValue = viewModel.toValue
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         
         animation.fillMode = .forwards
@@ -120,7 +87,7 @@ extension RHCircularProgressBar {
     }
     
     func setProgressWithAnimationFromCurrentValue(duration: TimeInterval=0.1, from fromValue: Float? = nil, to toValue: Float) {
-        self.toValue = toValue
+        viewModel.setToValue(with: toValue)
         progressLayer.strokeEnd = CGFloat(toValue)
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
@@ -148,8 +115,7 @@ extension RHCircularProgressBar {
         // remove progressLayer and gradientLayer
         progressLayer.removeFromSuperlayer()
         gradientLayer.removeFromSuperlayer()
-        
-        toValue = 0.0
+        viewModel.setToValue(with: 0.0)
     }
 }
 
@@ -157,11 +123,11 @@ extension RHCircularProgressBar {
 extension RHCircularProgressBar {
     func makeCircularPath() -> UIBezierPath {
         // 計算繪製路徑時需要考慮到線寬的內縮距離
-        let insetBounds = bounds.insetBy(dx: strokeWidth / 2, dy: strokeWidth / 2)
+        let insetBounds = bounds.insetBy(dx: viewModel.strokeWidth / 2, dy: viewModel.strokeWidth / 2)
         let center = CGPoint(x: insetBounds.midX, y: insetBounds.midY)
         let radius = min(insetBounds.width, insetBounds.height) / 2
         
-        let circlePath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: center, radius: radius, startAngle: viewModel.startAngle, endAngle: viewModel.endAngle, clockwise: true)
         return circlePath
     }
 }
@@ -174,7 +140,7 @@ private extension RHCircularProgressBar {
         trackLayer.lineCap = .round
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.strokeColor = Color.Neutral.v800.withAlphaComponent(0.7).cgColor
-        trackLayer.lineWidth = strokeWidth
+        trackLayer.lineWidth = viewModel.strokeWidth
         trackLayer.strokeEnd = 1.0
         return trackLayer
     }
@@ -184,10 +150,10 @@ private extension RHCircularProgressBar {
         progressLayer.lineCap = .round
         progressLayer.path = circularPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
-        progressLayer.strokeColor = progressLayerCGColor
-        progressLayer.lineWidth = strokeWidth
+        progressLayer.strokeColor = viewModel.progressLayerCGColor
+        progressLayer.lineWidth = viewModel.strokeWidth
         progressLayer.strokeStart = 0.0
-        progressLayer.strokeEnd = CGFloat(toValue)
+        progressLayer.strokeEnd = CGFloat(viewModel.toValue)
         return progressLayer
     }
     
@@ -201,7 +167,7 @@ private extension RHCircularProgressBar {
     func makeGradientLayer() -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.colors = makeShadeVariants(of: progressLayerColor)
+        gradientLayer.colors = makeShadeVariants(of: viewModel.progressLayerColor)
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1.0)
         return gradientLayer
@@ -233,14 +199,16 @@ private extension RHCircularProgressBar {
     }
 
     @objc func updateProgressLabel() {
-        let completionRate = Int(min(currentProgressValue * 100 + 1, 100))
+        let currentProgressValue = viewModel.getCurrentProgressLayerValue(withProgressLayer: progressLayer)
+        let completionRate = viewModel.getCompletionRate(withProgressLayer: progressLayer)
         delegate?.progressBar(self, completionRateWillUpdate: completionRate, currentBarProgress: currentProgressValue)
     }
     
     func stopDisplayLink() {
         displayLink?.invalidate()
         displayLink = nil
-        delegate?.progressBar(self, isDonetoValue: currentProgressValue == toValue, currentBarProgress: currentProgressValue)
+        let currentProgressValue = viewModel.getCurrentProgressLayerValue(withProgressLayer: progressLayer)
+        delegate?.progressBar(self, isDonetoValue: currentProgressValue == viewModel.toValue, currentBarProgress: currentProgressValue)
     }
 }
 
